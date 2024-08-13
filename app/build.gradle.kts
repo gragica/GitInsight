@@ -1,8 +1,8 @@
 plugins {
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("com.google.dagger.hilt.android")
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinSerialization)
 }
@@ -59,11 +59,16 @@ composeCompiler {
 }
 
 dependencies {
+    kapt(libs.hilt.compiler)
+
+    implementation(project(":core"))
     implementation(project(":data"))
     implementation(project(":domain"))
+
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.foundation)
     implementation(libs.navigation.compose)
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.hilt.navigation.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -71,20 +76,18 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.hilt)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.coil)
+
     testImplementation(libs.junit)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(libs.androidx.compose.foundation)
-
-    implementation(libs.kotlinx.serialization.json)
-    implementation(libs.hilt)
-    implementation(project(":core"))
-    kapt(libs.hilt.compiler)
-    implementation(libs.kotlinx.serialization.json)
-
-    implementation(libs.coil)
 }

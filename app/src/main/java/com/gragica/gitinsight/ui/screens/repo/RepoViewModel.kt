@@ -25,9 +25,6 @@ class RepoViewModel @Inject constructor(
                         RepoUiState.Success(repoDetails)
                     }
                 }
-                result.onFailure {
-                    println(it.message)
-                }
             }
         }
     }

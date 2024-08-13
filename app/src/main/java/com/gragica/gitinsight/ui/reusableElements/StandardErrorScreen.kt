@@ -8,20 +8,21 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.gragica.gitinsight.R
 
 @Composable
 fun StandardErrorScreen(
     onReload: () -> Unit = {},
 ) {
     Column(
-        modifier = Modifier
-            .fillMaxSize(),
+        modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("An error ocurred")
+        Text(stringResource(id = R.string.error_text))
         Button(onClick = { onReload() }) {
-            Text("Reload")
+            Text(stringResource(id = R.string.error_button))
         }
     }
 }

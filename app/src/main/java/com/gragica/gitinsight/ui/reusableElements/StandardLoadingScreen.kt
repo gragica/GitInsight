@@ -9,9 +9,7 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun StandardLoadingScreen() {
-    Box(
-        modifier = Modifier.fillMaxSize()
-    ) {
+    Box(modifier = Modifier.fillMaxSize()) {
         CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
     }
 }

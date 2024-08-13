@@ -35,20 +35,22 @@ android {
 }
 
 dependencies {
+    kapt(libs.hilt.compiler)
+
     implementation(project(":core"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-
     implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
     implementation(libs.retrofit)
     implementation(libs.okHttp)
     implementation(libs.okHttpLogginInterceptor)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.gson)
     implementation(libs.gsonConverter)
+
+    testImplementation(libs.junit)
+
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }

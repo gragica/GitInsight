@@ -1,4 +1,4 @@
-package com.gragica.gitinsight.data.repository
+package com.gragica.gitinsight.data.repository.user
 
 import com.gragica.gitinsight.core.model.Repo
 import com.gragica.gitinsight.core.model.User

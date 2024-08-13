@@ -3,7 +3,6 @@ package com.gragica.gitinsight.ui.reusableElements
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -34,13 +33,13 @@ fun StandardAppBar(
             .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-
         if (onBackButton != null)
             Image(
-                modifier = Modifier.clickable { onBackButton() }.padding(horizontal = 16.dp),
+                modifier = Modifier.clickable { onBackButton() }.padding(end = 16.dp),
                 painter = painterResource(id = R.drawable.ic_arrow_back),
                 contentDescription = stringResource(id = R.string.cd_back_button)
             )
+
         if (title != null) {
             Text(text = title, style = TextStyle(fontSize = 22.sp, fontWeight = FontWeight.Bold))
         }

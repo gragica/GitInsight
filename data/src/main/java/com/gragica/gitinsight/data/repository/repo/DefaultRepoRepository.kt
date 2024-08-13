@@ -1,4 +1,4 @@
-package com.gragica.gitinsight.data.repository
+package com.gragica.gitinsight.data.repository.repo
 
 import com.gragica.gitinsight.core.model.RepoTag
 import com.gragica.gitinsight.data.network.api.RepoApi
@@ -11,30 +11,6 @@ class DefaultRepoRepository @Inject constructor(
 ) : RepoRepository {
 
     private var repoTagsMap: HashMap<String, List<RepoTag>> = hashMapOf()
-
-//    override suspend fun getRepo(userId: String, repoId: String) =
-//        flow {
-//            val cachedRepo = repoDetailsMap[repoId]
-//            if (cachedRepo == null) {
-//                try {
-//                    val response = api.getRepo(userId, repoId)
-//                    if (response.isSuccessful) {
-//                        val body = response.body()
-//                        if (body != null) {
-//                            val coreModel = body.toCoreModel()
-//                            repoDetailsMap[repoId] = coreModel
-//                            emit(Result.success(coreModel))
-//                        } else {
-//                            emit(Result.failure(NullPointerException("Response body was null")))
-//                        }
-//                    } else {
-//                        emit(Result.failure(HttpException(response)))
-//                    }
-//                } catch (e: Exception) {
-//                    emit(Result.failure(Exception("Something went wrong", e)))
-//                }
-//            } else emit(Result.success(cachedRepo))
-//        }
 
     override suspend fun getRepoTags(userId: String, repoId: String) =
         flow {

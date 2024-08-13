@@ -1,4 +1,4 @@
-package com.gragica.gitinsight.data.repository
+package com.gragica.gitinsight.data.repository.repo
 
 import com.gragica.gitinsight.core.model.RepoTag
 import kotlinx.coroutines.flow.Flow

@@ -2,7 +2,7 @@ package com.gragica.gitinsight.ui.screens.user
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.gragica.gitinsight.data.repository.UserRepository
+import com.gragica.gitinsight.data.repository.user.UserRepository
 import com.gragica.gitinsight.ui.util.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

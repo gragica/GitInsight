@@ -1,9 +1,8 @@
-package com.gragica.gitinsight.data.repository
+package com.gragica.gitinsight.data.repository.user
 
 import com.gragica.gitinsight.core.model.Repo
 import com.gragica.gitinsight.core.model.User
 import com.gragica.gitinsight.data.network.api.UserApi
-import com.gragica.gitinsight.data.repository.util.apiCallToListFlow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException

@@ -38,7 +38,6 @@ fun RepoScreen(
                 LazyColumn(
                     contentPadding = PaddingValues(vertical = 8.dp)
                 ) {
-                    // First item with different design
                     item {
                         RepoHeader(details)
                     }

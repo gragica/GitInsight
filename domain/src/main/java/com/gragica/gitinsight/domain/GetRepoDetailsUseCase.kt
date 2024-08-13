@@ -1,7 +1,7 @@
 package com.gragica.gitinsight.domain
 
-import com.gragica.gitinsight.data.repository.RepoRepository
-import com.gragica.gitinsight.data.repository.UserRepository
+import com.gragica.gitinsight.data.repository.repo.RepoRepository
+import com.gragica.gitinsight.data.repository.user.UserRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flow
