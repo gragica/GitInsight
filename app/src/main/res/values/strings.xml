@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GitInsight</string>
+
+    <string name="cd_back_button">Back button</string>
+    <string name="title_user">Repos of %s</string>
+    <string name="title_repo">Repo %s</string>
+</resources>
